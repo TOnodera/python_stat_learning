@@ -1,0 +1,8 @@
+version: '3'
+services: 
+    app:
+        build: ./
+        volumes:
+            - /home/takeshi/.gitconfig:/home/python/.gitconfig
+            - /home/takeshi/.ssh:/home/python/.ssh
+            - /home/takeshi/website/python_stat:/home/python/app
