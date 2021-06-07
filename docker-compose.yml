@@ -2,7 +2,11 @@ version: '3'
 services: 
     app:
         build: ./
+        environment:
+            - DISPLAY=:0
+            - TZ=Asia/Tokyo
         volumes:
             - /home/takeshi/.gitconfig:/home/python/.gitconfig
             - /home/takeshi/.ssh:/home/python/.ssh
             - /home/takeshi/website/python_stat:/home/python/app
+            - /tmp/.X11-unix:/tmp/.X11-unix
